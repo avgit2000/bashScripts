@@ -25,10 +25,11 @@ removeDups() {
 exit_array={}
 
 for ((i=0; i<${#array[@]}; i++ )); do
-    removeDups ${array[$i]}
+	exit_array+=$(removeDup ${array[$i]})
 
 done
 
+echo $exit_array
 
 #Сортировка массива для отсеивания строковых значений
 
